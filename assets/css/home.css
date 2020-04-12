@@ -18,7 +18,6 @@ border-spacing:0}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -31,6 +30,7 @@ body {
   max-width: 100%;
   overflow: hidden;
   background-size: cover;
+  font-family: 'Alegreya', serif;
 }
 
 header {
@@ -40,6 +40,7 @@ header {
   align-items: center;
   z-index: 2;
   position: fixed;
+  font-family: Lato,Helvetica,sans-serif;
 }
 
 header nav {
@@ -57,7 +58,7 @@ nav ul li a {
   text-decoration: none;
   color: whitesmoke;
   padding: 1.2em;
-  font-size: 2vh;
+  font-size: 1.1vw;
 }
  
 nav ul li a:hover {
@@ -85,7 +86,6 @@ nav ul li a:hover {
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
-  padding: 1.2em;
 }
 .hero {
   height: 100vh;
@@ -121,7 +121,7 @@ nav ul li a:hover {
   text-align: center;
   line-height: 2rem;
   margin-bottom: 1rem;
-  font-size: 2vh;
+  font-size: 0.8vw;
 }
 /* LAYOUT 
 -------------------------------------------------------------------------------------- */
