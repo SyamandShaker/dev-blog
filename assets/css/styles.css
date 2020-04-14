@@ -1,4 +1,4 @@
-/* **css/reset/** *)
+/* **css/reset/Eric Mayer** *)
 --------------------------------------------------------------------------------------- */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,
 pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
@@ -18,97 +18,47 @@ border-spacing:0}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color: #212121;
+  font-size: 16px;
+}
+/* #endregion */
+body {
+  color: whitesmoke;
+  line-height: 1.5; /*1.5em = 24px*/
+  font-size: 1rem; /*em = 100% of the font-size of the parent*/ /*rem = 100% of the root element*/
+  overflow: hidden;
+  background-color: cornsilk;
   font-family: 'Alegreya', serif;
 }
+ /* LINKS */
 
-body {
 
-  line-height: 1.8em;
-  font-weight: 400;
-  font-size: 1.2rem;
-  background-color: #fafafa;
-}
-
-a {
-  text-decoration: none;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-p {
-  margin: 2rem 0;
-}
-
-/* HELPER CLASSES
--------------------------------------------------------------------------------------- */
-.warpper {
+/*
+header {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-wrap: nowrap;
   width: 100%;
-}
-
-.navigation {
-  height: 6rem;
-  width: 100%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 70rem;
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.navigation .navigation-title {
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-}
-
-.navigation a{
-  display: inline;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
   font-family: Lato,Helvetica,sans-serif;
-  font-weight: 700;
-  line-height: 4rem;
-  color: #212121;
+}
+*/
+/*TITLES*/
+h1,
+h2 {
+  font-weight: bold;
+  font-family: serif;
+  
 }
 
-.navigation .navigation-list a:hover {
-  color: #bd9009;
-}
 
-.navigation .navigation-list {
-  float: right;
-  list-style: none;
-  margin-bottom: 0;
-  margin-top: 0;
-}
+/* HELPER CLASS
+ DRY - Don't repeat yourself !
+-------------------------------------------------------------------------------------- */
 
-.navigation .navigation-list .navigation-item {
-  float: left;
-  margin-left: 1.4rem;
-  position: relative;
-}
 
-.article {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-}
 
-.footer {
-  width: 100%;
-  text-align: center;
-  line-height: 2rem;
-  font-size: 1.2rem;
-}
+
 /* LAYOUT 
 -------------------------------------------------------------------------------------- */
 

@@ -18,15 +18,16 @@ border-spacing:0}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  color: #212121;
+  font-family: 'Alegreya', serif;
 }
 
 body {
-  color: #212121;
+
   line-height: 1.8em;
   font-weight: 400;
   font-size: 1.2rem;
   background-color: #fafafa;
-  font-family: 'Alegreya', serif;
 }
 
 a {
@@ -70,7 +71,6 @@ p {
   font-size: 2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  color: #212121;
 }
 
 .navigation a{
@@ -81,15 +81,15 @@ p {
   color: #212121;
 }
 
-.navigation a:hover {
-  color: #2ca0cf;
-  transition: 0.5s ease-in-out;
-}
 .navigation .navigation-list {
   float: right;
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;
+}
+
+.navigation .navigation-list a:hover {
+  color: #bd9009;
 }
 
 .navigation .navigation-list .navigation-item {
@@ -99,15 +99,15 @@ p {
 }
 
 .article {
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
 }
 
 .footer {
   width: 100%;
   text-align: center;
-  line-height: 2rem;
-  font-size: 1.2rem
+  line-height: 2.0rem;
+  font-size: 1.2rem;
 }
 /* LAYOUT 
 -------------------------------------------------------------------------------------- */
