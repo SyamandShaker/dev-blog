@@ -128,6 +128,13 @@ p {
   max-width: 12vw;
 }
 
+.fs1 {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  letter-spacing: 1rem;
+}
+
 .footer {
   position: absolute;
   width: 100%;
