@@ -23,7 +23,7 @@ html {
 /* #endregion */
 body {
   color: #fff;
-  font-family: 'Alegreya', serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.8;
   font-size: 1.2rem;
   background-image: url(../img/bg.jpg);
@@ -40,20 +40,19 @@ img {
 }
 
 a {
-  font-family: 'Alegreya Sans', sans-serif;
   text-decoration: none;
   color: #fff;
 }
 
 h2 {
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Noto Serif', serif;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 p {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* HELPER CLASSES
@@ -110,29 +109,22 @@ p {
   position: relative;
 }
 
-.hero {
+.main-section {
   position: relative;
   text-align: center;
   height: 40rem;
 }
 
-.hero .hero-content {
+.main-section .main-section-content {
   position: absolute;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.hero .hero-content img {
+.main-section .main-section-content img {
   border-radius: 10rem;
   max-width: 12vw;
-}
-
-.fs1 {
-  display: flex;
-  font-size: 2rem;
-  justify-content: center;
-  letter-spacing: 1rem;
 }
 
 .footer {
@@ -140,8 +132,7 @@ p {
   width: 100%;
   bottom: 0;
   text-align: center;
-  line-height: 2.0rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   
 }
 /* LAYOUT 

@@ -19,7 +19,6 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: #212121;
-  font-family: 'Alegreya', serif;
 }
 
 body {
@@ -28,6 +27,8 @@ body {
   font-weight: 400;
   font-size: 1.2rem;
   background-color: #fafafa;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 a {
@@ -37,6 +38,7 @@ a {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: 'Noto Serif', serif;
 }
 
 p {
