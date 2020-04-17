@@ -106,10 +106,10 @@ p {
 }
 
 .footer {
+  bottom: 0;
   width: 100%;
   text-align: center;
-  line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 /* LAYOUT 
 -------------------------------------------------------------------------------------- */

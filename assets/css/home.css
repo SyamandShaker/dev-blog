@@ -127,8 +127,12 @@ p {
   max-width: 12vw;
 }
 
+.icon-container {
+  font-size: 1.8rem;
+  letter-spacing: 0.5rem;
+}
+
 .footer {
-  position: absolute;
   width: 100%;
   bottom: 0;
   text-align: center;
