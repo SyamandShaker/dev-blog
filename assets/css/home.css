@@ -23,7 +23,7 @@ html {
 /* #endregion */
 body {
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1.8;
   font-size: 1.2rem;
   background-image: url(../img/bg.jpg);
@@ -44,8 +44,8 @@ a {
   color: #fff;
 }
 
-h2 {
-  font-family: 'Noto Serif', serif;
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
@@ -89,7 +89,7 @@ p {
   display: inline;
   font-weight: 700;
   line-height: 4rem;
-  font-family: Lato,Helvetica,sans-serif;
+  font-family: Lato,sans-serif;
 }
 
 .navigation .navigation-list {

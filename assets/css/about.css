@@ -26,17 +26,17 @@ body {
   font-weight: 400;
   font-size: 1.2rem;
   background-color: #fafafa;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 a {
   text-decoration: none;
+  font-weight: 600;
 }
 
-h2 {
-  font-family: 'Noto Serif', serif;
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
 }
 
 p {
@@ -75,8 +75,6 @@ p {
 
 .navigation a{
   display: inline;
-  font-family: Lato,Helvetica,sans-serif;
-  font-weight: 700;
   line-height: 4rem;
   color: #212121;
 }
@@ -99,8 +97,8 @@ p {
 }
 
 .article {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer {
