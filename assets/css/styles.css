@@ -1,4 +1,4 @@
-/* **css/reset/Eric Mayer** *)
+/* **** CSS RESET BY Eric Mayer **** *)
 ---------------------------------------------- */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,
 pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
@@ -13,7 +13,7 @@ blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:
 border-spacing:0;box-sizing: border-box;}
 
 /* **CODE GENERAL FOR ALL PAGE** 
----------------------------------------------- */
+-------------------------------------------------------------------------------------------- */
 img {
     max-width: 100%;
     height: auto;
@@ -49,6 +49,10 @@ header nav>a {
     font-size: 1.4em;
 }
 
+header nav a:hover{
+    color: #3a6186;
+}
+
 main {
     flex-grow: 1;
     display: flex;
@@ -68,6 +72,7 @@ main>h2 {
     margin: 1rem 0;
     font-size: 2rem;
     font-family: 'Roboto Slab', serif;
+    font-weight: 500;
 }
 
 main>p {
@@ -81,6 +86,13 @@ main>p {
     font-size: 1.8rem;
     margin: 0 10px;
 }
+
+article {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 15px auto;
+}
+
 footer {
     text-align: center;
     padding: 0.8rem 0;
@@ -88,37 +100,57 @@ footer {
 
 /* HELPER CLASSES
 DRY - Don't repeat yourself !
----------------------------------------------- */
+-------------------------------------------------------------------------------------------- */
 
 
 
 
 /* LAYOUT 
-my styles for home page
----------------------------------------------- */
+-------------------------------------------------------------------------------------------- */
+/* **** my styles for home page **** */
 #home-page {
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(#000c40, #2c3e50, #3a6186);
+    background: linear-gradient(#000c40, #2c3e50, #3a6186); /* background compatible with --->  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #e2ebf0;
 } 
 
 #home-page>header a{
     color: #e2ebf0;
 }
-
+#home-page>header nav a:hover {
+    color: #85a4c1;
+}
 #home-page>main {
     justify-content: center;
     align-items: center;
 }
 
-/* MEDIA QUERIES
----------------------------------------------- */
-@media (max-width: 375px) {
+/* **** my styles for about page **** */
+#about-page article {
 
-    header a {
-        font-size: 100%;
-    }
+}
+
+/* **** my styles for lists blog page **** */
+#lists-blog-page article h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 10px auto;
+}
+
+/* **** my styles for single blog page **** */
+
+
+
+/* MEDIA QUERIES
+-------------------------------------------------------------------------------------------- */
+@media (max-width: 414px) {
     main {
         text-align: center;
+    }
+    header a {
+        font-size: 80%;
+    }
+    header nav {
+        font-size: 45%;
     }
 }
