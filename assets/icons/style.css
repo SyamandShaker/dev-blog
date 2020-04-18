@@ -27,15 +27,35 @@
 .icon-github:before {
   content: "\e903";
 }
+.icon-github:hover {
+  color: #fff;
+  box-shadow: 0 0 6px #fff;
+  border-radius: 25px;
+}
 .icon-email:before {
   content: "\e900";
+}
+.icon-email:hover {
+  color: rgb(255, 255, 255);
 }
 .icon-linkedin:before {
   content: "\e901";
 }
+.icon-linkedin:hover {
+  color: rgb(0, 115, 177);;
+  box-shadow: 0 0 4px #3a6186;
+}
 .icon-facebook:before {
   content: "\e902";
 }
+.icon-facebook:hover {
+  color: rgb(54, 109, 218);
+  box-shadow: 0 0 4px #3a6186;
+}
 .icon-twitter:before {
   content: "\e904";
+}
+.icon-twitter:hover {
+  color: rgb(29, 161, 242);
+  box-shadow: 0 0 4px #3a6186;
 }
