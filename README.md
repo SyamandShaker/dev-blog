@@ -1,8 +1,8 @@
 # THIS IS MY DEV-BLOG
 
-This is my first project with **POWERCODERS** and the well contains all work i do it and everything I learned in the class.
+This is my first project with **POWERCODERS** and inside I well put everything I learned in the class.
 
-## MY FIRST WEB
+## MY FIRST WEB PAGE
 
   <img src="assets/img/my-first-page-web.png">
 
