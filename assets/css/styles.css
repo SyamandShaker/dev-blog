@@ -101,6 +101,48 @@ footer {
 /* HELPER CLASSES
 DRY - Don't repeat yourself !
 -------------------------------------------------------------------------------------------- */
+@media (max-width: 950px) {
+
+    header {
+        flex-direction: column;
+        
+    }
+    header>a {
+        width: 110%;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        margin-top: 2em;
+        width: 100%;
+        text-align: right;
+    }
+    nav.active a {
+        display: flex;
+        justify-content: flex-end;
+        padding: .6em 0;
+    }
+    nav.active {
+        display: block;
+        position: absolute;
+        right: 5%;
+    }
+    .hemberger span {
+        display: block;
+        width: 1.8em;
+        height: 4px;
+        background: #e2ebf0;
+        margin: 6px;
+    }
+    .hemberger {
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: auto;
+        padding-bottom: .6em;
+    }
+
+}
 
 
 
