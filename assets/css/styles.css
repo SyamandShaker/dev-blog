@@ -101,7 +101,7 @@ footer {
 /* HELPER CLASSES
 DRY - Don't repeat yourself !
 -------------------------------------------------------------------------------------------- */
-@media (max-width: 950px) {
+/* @media (max-width: 950px) {
 
     header {
         flex-direction: column;
@@ -143,6 +143,7 @@ DRY - Don't repeat yourself !
     }
 
 }
+*/
 
 
 
@@ -194,5 +195,72 @@ DRY - Don't repeat yourself !
     }
     header nav {
         font-size: 45%;
+    }
+}
+
+
+/* --------Menu Hamberger--------- */
+#nav-triggers {
+	display: none;
+}
+
+@media (max-width: 800px) {
+	/*Hide the nav*/
+	#main-nav {
+		display: none;
+	}
+
+	/*Nav triggers*/
+	#nav-triggers {
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
+	#nav-triggers,
+	#nav-triggers a {
+		width: 44px;
+		height: 44px;
+		overflow: hidden;
+	}
+	#nav-triggers a {
+		display: flex;
+		justify-content: center;
+	}
+	#nav-triggers img {
+        width: 75%;
+        background-color: #e2ebf0;
+        border-radius: .2em;
+	}
+	.menu-is-open #open-menu {
+		display: none;
+	}
+	/* MOBILE NAV */
+	.menu-is-open {
+		overflow: hidden;
+	}
+
+	#top-header {
+		margin-top: 2em;
+	}
+
+	#main-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.menu-is-open #main-nav {
+		display: flex;
+		justify-content: center;
+        align-items: center;
+        flex-direction: column;
+		background-color: rgba(0, 0, 0, .8);
+    }
+    header #main-nav a {
+        color: rgb(226, 235, 240);
+        margin: .5em 0;
+        padding: .5em 0;
     }
 }
