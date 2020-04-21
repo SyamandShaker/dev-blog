@@ -1,5 +1,6 @@
-/* **** CSS RESET BY Eric Mayer **** *)
----------------------------------------------- */
+/* **** CSS RESET BY Eric Mayer ****
+-------------------------------------------------------------------------------------------- */
+/*#region RESET */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,
 pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
 small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
@@ -12,7 +13,7 @@ figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body
 blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;
 border-spacing:0;box-sizing: border-box;}
 
-/* **CODE GENERAL FOR ALL PAGE** 
+/* ** CODE GENERAL FOR ALL PAGES ** 
 -------------------------------------------------------------------------------------------- */
 img {
     max-width: 100%;
@@ -36,7 +37,7 @@ header {
     padding: 2rem 0;
     align-items: center;
 }
-
+/* **** LINKS **** */
 header a {
     text-decoration: none;
     font-size: 2em;
@@ -49,10 +50,12 @@ header nav>a {
     font-size: 1.4em;
 }
 
-header nav a:hover{
+header nav>a:hover{
     color: #3a6186;
 }
-
+a {
+ text-decoration: none;
+}
 main {
     flex-grow: 1;
     display: flex;
@@ -67,12 +70,21 @@ main>img {
     border-radius: 50%;
     box-shadow: 0 0 20px #567694;
 }
-
+/* **** TITLES **** */
 main>h2 {
     margin: 1rem 0;
     font-size: 2rem;
     font-family: 'Roboto Slab', serif;
     font-weight: 500;
+}
+h3, h4 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 10px auto;
+}
+h4 {
+    font-size: 1.3rem; 
 }
 
 main>p {
@@ -93,58 +105,20 @@ article {
     margin: 15px auto;
 }
 
+
 footer {
     text-align: center;
     padding: 0.8rem 0;
 }
 
+footer>h3{
+    font-size: 1em;
+    margin: auto;
+    font-weight: normal;
+}
 /* HELPER CLASSES
 DRY - Don't repeat yourself !
 -------------------------------------------------------------------------------------------- */
-/* @media (max-width: 950px) {
-
-    header {
-        flex-direction: column;
-        
-    }
-    header>a {
-        width: 110%;
-    }
-    nav {
-        display: none;
-        flex-direction: column;
-        margin-top: 2em;
-        width: 100%;
-        text-align: right;
-    }
-    nav.active a {
-        display: flex;
-        justify-content: flex-end;
-        padding: .6em 0;
-    }
-    nav.active {
-        display: block;
-        position: absolute;
-        right: 5%;
-    }
-    .hemberger span {
-        display: block;
-        width: 1.8em;
-        height: 4px;
-        background: #e2ebf0;
-        margin: 6px;
-    }
-    .hemberger {
-        cursor: pointer;
-        position: absolute;
-        right: 5%;
-        top: auto;
-        padding-bottom: .6em;
-    }
-
-}
-*/
-
 
 
 
@@ -157,6 +131,7 @@ DRY - Don't repeat yourself !
 } 
 
 #home-page>header a{
+    text-decoration: none;
     color: #e2ebf0;
 }
 #home-page>header nav a:hover {
@@ -168,36 +143,50 @@ DRY - Don't repeat yourself !
 }
 
 /* **** my styles for about page **** */
-#about-page article {
 
-}
+
 
 /* **** my styles for lists blog page **** */
-#lists-blog-page article h3 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 500;
-    font-size: 1.4rem;
-    margin: 10px auto;
-}
 
-/* **** my styles for single blog page **** */
+
+
+/* **** my styles for my blog-1 *****/
+    #blog-1>main article img {
+        display: block;
+        width: 80%;
+        height: auto;
+        margin: 2.8em auto 1.5em auto;
+        box-shadow: 0px 0px 8px 0.5px #111;
+        transition: transform .5s ease;
+        cursor: pointer;
+    }
+    #blog-1>main article img:hover {
+        transform: scale(1.1);
+    }
 
 
 
 /* MEDIA QUERIES
 -------------------------------------------------------------------------------------------- */
 @media (max-width: 414px) {
+    header {
+        width: 90%;
+        padding: 1.5rem 0;
+    }
     main {
         text-align: center;
     }
     header a {
-        font-size: 80%;
+        font-size: 1.8em;
     }
     header nav {
-        font-size: 45%;
+        font-size: 70%;
+    }
+    #nav-triggers, #nav-triggers a {
+        width: 3rem;
+        height: 1.8rem;
     }
 }
-
 
 /* --------Menu Hamberger--------- */
 #nav-triggers {
@@ -205,9 +194,15 @@ DRY - Don't repeat yourself !
 }
 
 @media (max-width: 800px) {
+
 	/*Hide the nav*/
 	#main-nav {
-		display: none;
+        display: none;
+        position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
 	}
 
 	/*Nav triggers*/
@@ -218,8 +213,8 @@ DRY - Don't repeat yourself !
 	}
 	#nav-triggers,
 	#nav-triggers a {
-		width: 44px;
-		height: 44px;
+		width: 50px;
+		height: 35px;
 		overflow: hidden;
 	}
 	#nav-triggers a {
@@ -238,19 +233,6 @@ DRY - Don't repeat yourself !
 	.menu-is-open {
 		overflow: hidden;
 	}
-
-	#top-header {
-		margin-top: 2em;
-	}
-
-	#main-nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-	}
-
 	.menu-is-open #main-nav {
 		display: flex;
 		justify-content: center;
@@ -262,5 +244,6 @@ DRY - Don't repeat yourself !
         color: rgb(226, 235, 240);
         margin: .5em 0;
         padding: .5em 0;
+        font-size: 2.5em;
     }
 }
