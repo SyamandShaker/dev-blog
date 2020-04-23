@@ -25,11 +25,19 @@
 </head>
 
 <body id="about-page">
-    <header>
+    <header id="top-header" class="top-header">
         <a href="index.html">
             <h1>SYAMAND SHAKER</h1>
         </a>
-        <nav>
+        <figure id="hamburger-menu">
+            <a href="#" id="open-menu" class="trigger">
+                <img src="assets/img/burger-icon.svg" alt="Burger menu">
+            </a>
+            <a href="#" id="close-menu" class="trigger">
+                <img src="assets/img/close-icon.svg" alt="Close menu">
+            </a>
+        </figure>
+        <nav id="main-nav">
             <a href="about.html" title="About">About</a>
             <a href="posts/post-template.html" title="Blog">Blog</a>
             <a href="#" title="Posts">Posts</a>
@@ -38,13 +46,32 @@
     <main>
         <h2>About</h2>
         <article>
-            Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dol.
+            Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dol.
         </article>
     </main>
     <footer>
         <h3>© 2020· Powered by Syamand Shaker</h3>
     </footer>
+    <script>
+        const body = document.querySelector("body");
+        const openMenu = document.querySelector("#open-menu");
+        const closeMenu = document.querySelector("#close-menu");
 
+        openMenu.addEventListener('click', function () {
+            body.classList.add('menu-is-open');
+        });
+        closeMenu.addEventListener('click', function () {
+            body.classList.remove('menu-is-open');
+        });
+    </script>
 </body>
 
 </html>

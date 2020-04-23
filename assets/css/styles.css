@@ -38,7 +38,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     padding: 2rem 0;
     align-items: center;
@@ -69,7 +69,7 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -133,7 +133,17 @@ ol {
 ol>li {
     padding: 5px 0;
 }
-
+pre {
+    color: rgb(255, 255, 255);
+    background-color: rgb(2, 18, 39);
+    font-size: .5em;
+    width: 70%;
+    margin: auto;
+    line-height: 1.2em;
+    letter-spacing: 2px;
+    box-shadow: 0 0 2px #000;
+    border-radius: 2px;
+}
 footer {
     text-align: center;
     padding: 0.8rem 0;
@@ -210,23 +220,18 @@ DRY - Don't repeat yourself !
         width: 90%;
         padding: 1.5rem 0;
     }
-
     main {
         text-align: center;
     }
-
     header a {
         font-size: 1.8em;
     }
-
     header nav {
         font-size: 70%;
     }
-
-    #hamburger-menu,
-    #hamburger-menu a {
-        width: 3rem;
-        height: 1.8rem;
+    .img-styles {
+        width: 100%;
+        margin: 1.8em 0;
     }
 }
 
@@ -294,5 +299,10 @@ DRY - Don't repeat yourself !
         margin: .5em 0;
         padding: .5em 0;
         font-size: 2.5em;
+    }
+
+    .img-styles {
+        width: 100%;
+        margin: 1.8em 0;
     }
 }

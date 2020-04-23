@@ -28,16 +28,24 @@
 </head>
 
 <body id="blog-3">
-  <header>
+  <header id="top-header" class="top-header">
     <a href="../index.html">
-      <h1>SYAMAND SHAKER</h1>
+        <h1>SYAMAND SHAKER</h1>
     </a>
-    <nav>
-      <a href="../about.html" title="About">About</a>
-      <a href="post-template.html" title="Blog">Blog</a>
-      <a href="#" title="Posts">Posts</a>
+    <figure id="hamburger-menu">
+        <a href="#" id="open-menu" class="trigger">
+            <img src="../assets/img/burger-icon.svg" alt="Burger menu">
+        </a>
+        <a href="#" id="close-menu" class="trigger">
+            <img src="../assets/img/close-icon.svg" alt="Close menu">
+        </a>
+    </figure>
+    <nav id="main-nav">
+        <a href="../about.html" title="About">About</a>
+        <a href="post-template.html" title="Blog">Blog</a>
+        <a href="#" title="Posts">Posts</a>
     </nav>
-  </header>
+</header>
   <main>
     <h2>Blog</h2>
     <article>
@@ -47,8 +55,7 @@
       of files. Its goals are speed, data integrity, and support for distributed and non-linear workflows.
       <br>
       Git is easy to learn and has a small footprint with lightning-fast performance. It outperforms content management
-      tools such as
-      Subversion, CVS, Perforce and ClearCase with features such as inexpensive local branches, convenient transit areas
+      tools such as Subversion, CVS, Perforce and ClearCase with features such as inexpensive local branches, convenient transit areas
       and multiple workflows.
       <br>
       SCM {software configuration management } is a practice for tracking and controlling changes to development
@@ -57,12 +64,53 @@
         <img src="../assets/img/Git-operations.png" alt="Git-operations">
         <figcaption>Git Operations</figcaption>
       </figure>
+      <pre>
+        <code>   
+          <span style='color: #00ff0a;'>Syamand Shaker@W-SHAKERS-1</span> <span style='color: #da00ff;'>MINGW64</span> <span style='color: #FFEB3B;'> ~/POWERCODERS/dev-blog</span> <span style='color: #00e2ff;'>(gh-pages)</span>
+            $ git status
+            On branch gh-pages
+            Your branch is up to date with 'origin/gh-pages'.
+
+            Changes not staged for commit:
+              (use "git add file..." to update what will be committed)
+              (use "git restore file..." to discard changes in working directory)
+              <span style='color: #FF0000;'>
+                    modified:   about.html
+                    modified:   assets/css/styles.css
+                    modified:   assets/js/app.js
+                    modified:   index.html
+                    modified:   posts/post-template-1.html
+                    modified:   posts/post-template-10.html
+                    modified:   posts/post-template-2.html
+                    modified:   posts/post-template-3.html
+                    modified:   posts/post-template-4.html
+                    modified:   posts/post-template-5.html
+                    modified:   posts/post-template-6.html
+                    modified:   posts/post-template-7.html
+                    modified:   posts/post-template-8.html
+                    modified:   posts/post-template-9.html
+                    modified:   posts/post-template.html
+                </span>
+            no changes added to commit (use "git add" and/or "git commit -a")
+        </code>
+      </pre>
     </article>
   </main>
   <footer>
     <h3>© 2020· Powered by Syamand Shaker</h3>
   </footer>
-
+  <script>
+    const body = document.querySelector("body");
+    const openMenu = document.querySelector("#open-menu");
+    const closeMenu = document.querySelector("#close-menu");
+    
+    openMenu.addEventListener('click', function () {
+        body.classList.add('menu-is-open');
+    });
+    closeMenu.addEventListener('click', function () {
+        body.classList.remove('menu-is-open');
+    });
+</script>
 </body>
 
 </html>

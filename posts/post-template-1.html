@@ -28,16 +28,24 @@
 </head>
 
 <body id="blog-1">
-  <header>
+  <header id="top-header" class="top-header">
     <a href="../index.html">
-      <h1>SYAMAND SHAKER</h1>
+        <h1>SYAMAND SHAKER</h1>
     </a>
-    <nav>
-      <a href="../about.html" title="About">About</a>
-      <a href="post-template.html" title="Blog">Blog</a>
-      <a href="#" title="Posts">Posts</a>
+    <figure id="hamburger-menu">
+        <a href="#" id="open-menu" class="trigger">
+            <img src="../assets/img/burger-icon.svg" alt="Burger menu">
+        </a>
+        <a href="#" id="close-menu" class="trigger">
+            <img src="../assets/img/close-icon.svg" alt="Close menu">
+        </a>
+    </figure>
+    <nav id="main-nav">
+        <a href="../about.html" title="About">About</a>
+        <a href="post-template.html" title="Blog">Blog</a>
+        <a href="#" title="Posts">Posts</a>
     </nav>
-  </header>
+</header>
   <main>
     <h2>Blog 1</h2>
     <h5>Published 21.04.2020</h5>
@@ -84,7 +92,18 @@
   <footer>
     <h3>© 2020· Powered by Syamand Shaker</h3>
   </footer>
-
+  <script>
+    const body = document.querySelector("body");
+    const openMenu = document.querySelector("#open-menu");
+    const closeMenu = document.querySelector("#close-menu");
+    
+    openMenu.addEventListener('click', function () {
+        body.classList.add('menu-is-open');
+    });
+    closeMenu.addEventListener('click', function () {
+        body.classList.remove('menu-is-open');
+    });
+</script>
 </body>
 
 </html>
