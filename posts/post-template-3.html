@@ -64,6 +64,7 @@
         <img src="../assets/img/Git-operations.png" alt="Git-operations">
         <figcaption>Git Operations</figcaption>
       </figure>
+      <p>Step 0 to check what we've changed with $ git status</p>
       <pre>
         <code>   
           <span style='color: #00ff0a;'>Syamand Shaker@W-SHAKERS-1</span> <span style='color: #da00ff;'>MINGW64</span> <span style='color: #FFEB3B;'> ~/POWERCODERS/dev-blog</span> <span style='color: #00e2ff;'>(gh-pages)</span>
@@ -92,6 +93,54 @@
                     modified:   posts/post-template.html
                 </span>
             no changes added to commit (use "git add" and/or "git commit -a")
+        </code>
+      </pre>
+      <p>Step 1 to publish our web page on GitHub with $ git add .</p>
+      <pre>
+        <code>
+          <span style='color: #00ff0a;'>Syamand Shaker@W-SHAKERS-1</span> <span style='color: #da00ff;'>MINGW64</span> <span style='color: #FFEB3B;'> ~/POWERCODERS/dev-blog</span> <span style='color: #00e2ff;'>(gh-pages)</span>
+          $ git add .
+          warning: LF will be replaced by CRLF in posts/post-template-10.html.
+          The file will have its original line endings in your working directory
+          warning: LF will be replaced by CRLF in posts/post-template-3.html.
+          The file will have its original line endings in your working directory
+          warning: LF will be replaced by CRLF in posts/post-template-4.html.
+          The file will have its original line endings in your working directory
+          warning: LF will be replaced by CRLF in posts/post-template-5.html.
+          The file will have its original line endings in your working directory
+          warning: LF will be replaced by CRLF in posts/post-template-6.html.
+          The file will have its original line endings in your working directory
+          warning: LF will be replaced by CRLF in posts/post-template-7.html.
+          The file will have its original line endings in your working directory
+          warning: LF will be replaced by CRLF in posts/post-template-8.html.
+          The file will have its original line endings in your working directory
+          warning: LF will be replaced by CRLF in posts/post-template-9.html.
+          The file will have its original line endings in your working directory
+        </code>
+      </pre>
+      <p>Step 2 to publish our web page on GitHub with $ git commit -m "Description for what you changed"</p>
+      <pre>
+        <code>
+          <span style='color: #00ff0a;'>Syamand Shaker@W-SHAKERS-1</span> <span style='color: #da00ff;'>MINGW64</span> <span style='color: #FFEB3B;'> ~/POWERCODERS/dev-blog</span> <span style='color: #00e2ff;'>(gh-pages)</span>
+          $ git commit -m "add my blog-3"
+          [gh-pages f2833ba] add my blog-3
+          15 files changed, 399 insertions(+), 126 deletions(-)
+        </code>
+      </pre>
+      <p>Step 3 to publish our web page on GitHub with $ git push</p>
+      <pre>
+        <code>
+          <span style='color: #00ff0a;'>Syamand Shaker@W-SHAKERS-1</span> <span style='color: #da00ff;'>MINGW64</span> <span style='color: #FFEB3B;'> ~/POWERCODERS/dev-blog</span> <span style='color: #00e2ff;'>(gh-pages)</span>
+          $ git push
+          Enumerating objects: 41, done.
+          Counting objects: 100% (35/35), done.
+          Delta compression using up to 4 threads
+          Compressing objects: 100% (19/19), done.
+          Writing objects: 100% (21/21), 4.60 KiB | 1.15 MiB/s, done.
+          Total 21 (delta 15), reused 0 (delta 0), pack-reused 0
+          remote: Resolving deltas: 100% (15/15), completed with 8 local objects.
+          To https://github.com/SyamandShaker/dev-blog.git
+            d63f445..f2833ba  gh-pages -> gh-pages
         </code>
       </pre>
     </article>
