@@ -7,7 +7,9 @@
     <title>Syamand Shaker</title>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto+Slab:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <!--ICONMOON-->
     <link rel="stylesheet" href="assets/icons/style.css">
@@ -29,18 +31,18 @@
 </head>
 
 <body id="home-page">
-    <header id="top-header" class="top-header row">
+    <header id="top-header" class="top-header">
         <a href="index.html">
             <h1>SYAMAND SHAKER</h1>
         </a>
-        <figure id="nav-triggers">
+        <figure id="hamburger-menu">
             <a href="#" id="open-menu" class="trigger">
-              <img src="assets/img/burger-icon.svg" alt="Burger menu">
+                <img src="assets/img/burger-icon.svg" alt="Burger menu">
             </a>
             <a href="#" id="close-menu" class="trigger">
-              <img src="assets/img/close-icon.svg" alt="Close menu">
+                <img src="assets/img/close-icon.svg" alt="Close menu">
             </a>
-          </figure>
+        </figure>
         <nav id="main-nav">
             <a href="about.html" title="About">About</a>
             <a href="posts/post-template.html" title="Blog">Blog</a>
@@ -52,7 +54,8 @@
         <h2>Syamand Shaker</h2>
         <p>Websit developer and Specialist in installation,<br> configuration and administration PC, Linux, Mac</p>
         <div class="social">
-            <a href="https://www.linkedin.com/in/syamand-shaker-0ab3131a7/" title="Linkedin"><span class="icon icon-linkedin"></span></a>
+            <a href="https://www.linkedin.com/in/syamand-shaker-0ab3131a7/" title="Linkedin"><span
+                    class="icon icon-linkedin"></span></a>
             <a href="mailto:syamandshaker@outlook.fr" title="Email"><span class="icon icon-email"></span></a>
             <a href="https://github.com/SyamandShaker" title="GitHub"><span class="icon icon-github"></span></a>
             <a href="https://twitter.com/SyamandShaker" title="Twitter"><span class="icon icon-twitter"></span></a>
@@ -62,8 +65,18 @@
     <footer>
         <h3>© 2020· Powered by Syamand Shaker</h3>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script>
+        const body = document.querySelector("body");
+        const openMenu = document.querySelector("#open-menu");
+        const closeMenu = document.querySelector("#close-menu");
+
+        openMenu.addEventListener('click', function () {
+            body.classList.add('menu-is-open');
+        });
+        closeMenu.addEventListener('click', function () {
+            body.classList.remove('menu-is-open');
+        });
+    </script>
 </body>
 
 </html>
