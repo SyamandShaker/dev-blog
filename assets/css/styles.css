@@ -82,25 +82,19 @@ main>img {
 
 /* **** TITLES **** */
 main>h2 {
-    margin: 1rem 0;
-    font-size: 2rem;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 500;
+    font-size: 2em;
 }
 
-h3,
-h4 {
+h2,
+h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: 500;
-    font-size: 1.5rem;
-    margin: 10px auto;
+    font-size: 1.2em;
+    margin: .3em 0;
+    padding: .2em 0;
 }
 
 h4 {
-    font-size: 1.3rem;
-}
-
-h5 {
     font-size: .9em;
     font-style: italic;
     color: rgb(139, 154, 161);
@@ -121,7 +115,7 @@ main>p {
 article {
     font-size: 1.2rem;
     line-height: 1.8rem;
-    margin: 15px auto;
+    margin: .5em auto;
 }
 
 ol {
@@ -137,12 +131,12 @@ pre {
     display: block;
     color: rgb(255, 255, 255);
     background-color: rgb(2, 18, 39);
-    font-size: .5vw;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: .5em;
     width: 70%;
     margin: 3em auto;
-    line-height: 1.2em;
+    line-height: 1.4em;
     letter-spacing: 2px;
-    box-shadow: 0 0 2px #000;
     border-radius: 2px;
 }
 footer {
