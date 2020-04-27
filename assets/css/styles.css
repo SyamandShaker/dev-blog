@@ -128,16 +128,7 @@ ol>li {
     padding: 5px 0;
 }
 pre {
-    display: block;
-    color: rgb(255, 255, 255);
-    background-color: rgb(2, 18, 39);
-    border: 1px solid rgb(0, 0, 0);
-    font-size: .5em;
-    width: 70%;
-    margin: 3em auto;
-    line-height: 1.4em;
-    letter-spacing: 2px;
-    border-radius: 2px;
+  
 }
 footer {
     text-align: center;
@@ -167,7 +158,10 @@ DRY - Don't repeat yourself !
 .img-styles:hover {
     transform: scale(1.1);
 }
-
+.language-git{
+    line-height: .9 !important;
+    font-size: .8em !important;
+}
 /* LAYOUT 
 -------------------------------------------------------------------------------------------- */
 /*#region **** my styles for home page **** */
