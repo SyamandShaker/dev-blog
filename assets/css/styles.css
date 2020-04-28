@@ -16,13 +16,14 @@ border-spacing:0;box-sizing: border-box;}
 /* ** CODE GENERAL FOR ALL PAGES ** 
 -------------------------------------------------------------------------------------------- */
 img {
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
 
 figcaption {
     text-align: center;
-    font-size: .5em;
+    font-size: .6em;
     
 }
 
@@ -73,13 +74,6 @@ main {
     margin: 0 auto;
 }
 
-main>img {
-    width: 250px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #567694;
-}
-
 /* **** TITLES **** */
 main>h2 {
     font-size: 2em;
@@ -115,7 +109,7 @@ main>p {
 article {
     font-size: 1.2rem;
     line-height: 1.8rem;
-    margin: .5em auto;
+    margin: .5em 0;
 }
 
 ol {
@@ -127,9 +121,7 @@ ol {
 ol>li {
     padding: 5px 0;
 }
-pre {
-  
-}
+
 footer {
     text-align: center;
     padding: 0.8rem 0;
@@ -146,22 +138,22 @@ DRY - Don't repeat yourself !
 -------------------------------------------------------------------------------------------- */
 .img-styles {
     display: block;
-    width: 70%;
-    margin: 2.4em auto;
+    margin: 1.5em auto;
     box-shadow: 0px 0px 8px 0.5px #111;
-    transition: transform .5s ease;
     cursor: pointer;
 }
-.img-styles>img {
-    width: 100%;
-}
-.img-styles:hover {
-    transform: scale(1.1);
-}
+
 .language-git{
-    line-height: .9 !important;
-    font-size: .8em !important;
+    line-height: 1 !important;
+    font-size: .9em !important;
+    margin: .5em auto !important;
+    width: 80% !important;
 }
+.language-js {
+    margin: .5em auto !important;
+    font-size: .9em !important;
+}
+
 /* LAYOUT 
 -------------------------------------------------------------------------------------------- */
 /*#region **** my styles for home page **** */
@@ -184,6 +176,12 @@ DRY - Don't repeat yourself !
     justify-content: center;
     align-items: center;
 }
+#home-page img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #567694;
+}
 
 /*#region **** my styles for about page **** */
 
@@ -204,6 +202,11 @@ DRY - Don't repeat yourself !
     text-align: center;
 }
 
+/*#region **** my styles for my blog-4 **** */
+
+#blog-4>main article .img-styles {
+    width: 40%;
+}
 /* MEDIA QUERIES
 -------------------------------------------------------------------------------------------- */
 @media (max-width: 414px) {
@@ -220,10 +223,10 @@ DRY - Don't repeat yourself !
     header nav {
         font-size: 70%;
     }
-    .img-styles {
-        width: 100%;
-        margin: 1.8em 0;
+    article {
+        margin: .5em 0;
     }
+
 }
 
 /* --------Menu Hamberger--------- */

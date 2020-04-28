@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  
+  <!-- PLUGINS PRISM-JS -->
+  <link rel="stylesheet" href="../assets/plugins/prism-js/prism.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- FAVICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#6d6d6d">
+  <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-config" content="../assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- CSS LINKS-->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+
+<body id="blog-4">
+  <header id="top-header" class="top-header">
+    <a href="../index.html">
+        <h1>SYAMAND SHAKER</h1>
+    </a>
+    <figure id="hamburger-menu">
+        <a href="#" id="open-menu" class="trigger">
+            <img src="../assets/img/burger-icon.svg" alt="Burger menu">
+        </a>
+        <a href="#" id="close-menu" class="trigger">
+            <img src="../assets/img/close-icon.svg" alt="Close menu">
+        </a>
+    </figure>
+    <nav id="main-nav">
+        <a href="../about.html" title="About">About</a>
+        <a href="post-template-00.html" title="Blog">Blog</a>
+        <a href="#" title="Posts">Posts</a>
+    </nav>
+</header>
+  <main>
+      <h2>Blog</h2>
+      <article>
+          <h3>Javascript Arrays</h3>
+          Objects allow you to store keyed collections of values. That’s fine.
+          <br>
+          But quite often we find that we need an ordered collection, where we have a 1st, a 2nd, a 3rd element and so on. For example, we need that to store a list of something: users, goods, HTML elements etc.
+          <br>
+          It is not convenient to use an object here, because it provides no methods to manage the order of elements. We can’t insert a new property “between” the existing ones. Objects are just not meant for such use.
+          <br>
+          There exists a special data structure named Array, to store ordered collections.
+        <h3>Declaration</h3>
+        <p>There are two syntaxes for creating an empty array:</p>
+        <pre>
+          <code class="language-js">
+            let arr = new Array();
+            let arr = []; // We will use only this syntaxe!
+          </code>
+        </pre>
+        <p>Almost all the time, the second syntax is used. We can supply initial elements in the brackets:</p>
+        <pre>
+          <code class="language-js">
+            let arr1 = [1,2,3,4,5];   
+            console.log(arr1);   // The result in the console --> [1, 2, 3, 4, 5];
+            let arr2 = ["Sam", "Lou", "Jeanne", "Fölv"];
+            console.log(arr2);   // The result in the console --> ["Sam", "Lou", "Jeanne", "Fölv"];
+          </code>
+        </pre>
+        <p>Array elements are numbered, starting with zero.</p>
+        <p>We can get an element by its number in square brackets:</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Sam", "Lou", "Jeanne", "Fölv"];
+            // (arr2[0]) --> is Sam
+            // (arr2[1]) --> is Lou
+            // (arr2[2]) --> is Jeanne
+            // (arr2[3]) --> is Fölv
+            console.log(arr2[1]); // The result in the console --> Lou;
+          </code>
+        </pre>
+        <p>We can replace an element:</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Sam", "Lou", "Jeanne", "Fölv"];
+            arr2[0] = "Astro" ;
+            console.log(arr2); // The result in the console --> ["Astro", "Lou", "Jeanne", "Fölv"];
+          </code>
+        </pre>
+        <p>…Or add a new one to the array:</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Sam", "Lou", "Jeanne", "Fölv"];
+            arr2[4] = "Pablo" ;
+            console.log(arr2); // The result in the console --> ["Sam", "Lou", "Jeanne", "Fölv", "Pablo"];
+          </code>
+        </pre>
+        <p>The total count of the elements in the array is its <span style="background-color: #cacaca; border-radius: 3px;">length</span>:</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Sam", "Lou", "Jeanne", "Fölv"];
+            console.log(arr2.length); // The result in the console --> 4
+          </code>
+        </pre>
+        <p>We can also use alert to show the whole array.</p>
+        <pre>
+          <code class="language-js">
+            alert("it's working!")
+          </code>
+        </pre>
+        <p>You will see something like this in your browser</p>
+        <figure class="img-styles">
+          <img src="../assets/img/alert-browser.png" alt="">
+          <figcaption>Alert browser exemple!</figcaption>
+        </figure>
+        <h3>Methods pop/push, shift/unshift</h3>
+        <p>A queue is one of the most common uses of an array. In computer science, this means an ordered collection of elements which supports two operations:</p>
+        <p><span style="background-color: #cacaca; border-radius: 3px;">push( )</span> adds an element to the end</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Astro", "Lou", "Jeanne", "Fölv", "Pablo"];
+            arr2.push("Solo");
+            console.log(arr2); // The result in the console --> ["Astro", "Lou", "Jeanne", "Fölv", "Pablo", "Solo"];
+          </code>
+        </pre>
+        <p><span style="background-color: #cacaca; border-radius: 3px;">unshift( )</span> Add the element to the beginning of the array:</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Astro", "Lou", "Jeanne", "Fölv", "Pablo"];
+            arr2.unshift("Niko");
+            console.log(arr2); // The result in the console --> ["Niko", "Astro", "Lou", "Jeanne", "Fölv", "Pablo"];
+          </code>
+        </pre>
+        <p><span style="background-color: #cacaca; border-radius: 3px;">pop( )</span> takes the last element</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Astro", "Lou", "Jeanne", "Fölv", "Pablo"];
+            arr2.pop();
+            console.log(arr2); // The result in the console --> ["Astro", "Lou", "Jeanne", "Fölv"];
+          </code>
+        </pre>
+        <p><span style="background-color: #cacaca; border-radius: 3px;">shift( )</span> takes the first element</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Astro", "Lou", "Jeanne", "Fölv", "Pablo"];
+            arr2.shift();
+            console.log(arr2) // The result in the console --> ["Lou", "Jeanne", "Fölv", "Pablo"];
+          </code>
+        </pre>
+        <p><span style="background-color: #cacaca; border-radius: 3px;">splice( )</span> method that adds or removes items to or from the array. It’s a method which changes the content by adding the new elements or removing the old once from an array.</p>
+        <pre>
+          <code class="language-js">
+            let arr2 = ["Astro", "Lou", "Jeanne", "Fölv", "Pablo"];
+            arr2.splice(0, 4, "Bob"); // Here I remove my elements from 0 to 3, I keep 4 and add "bob"!
+            console.log(arr2); // The result in the console --> ["Bob", "Pablo"];
+          </code>
+        </pre>
+      </article>
+  </main>
+  <footer>
+    <h3>© 2020· Powered by Syamand Shaker</h3>
+  </footer>
+  <script>
+    const body = document.querySelector("body");
+    const openMenu = document.querySelector("#open-menu");
+    const closeMenu = document.querySelector("#close-menu");
+    
+    openMenu.addEventListener('click', function () {
+        body.classList.add('menu-is-open');
+    });
+    closeMenu.addEventListener('click', function () {
+        body.classList.remove('menu-is-open');
+    });
+</script>
+<script src="../assets/plugins/prism-js/prism.js"></script>
+</body>
+
+</html>
