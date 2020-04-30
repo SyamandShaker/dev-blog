@@ -59,14 +59,13 @@
           <br>
           There exists a special data structure named Array, to store ordered collections.
         <h3>Declaration</h3>
-        <p>There are two syntaxes for creating an empty array:</p>
+        <p>There are an syntaxe for creating an empty array:</p>
         <pre>
           <code class="language-js">
-            let arr = new Array();
-            let arr = []; // We will use only this syntaxe!
+            let arr = [];
           </code>
         </pre>
-        <p>Almost all the time, the second syntax is used. We can supply initial elements in the brackets:</p>
+        <p>Almost all the time, this syntax is used. We can supply initial elements in the brackets:</p>
         <pre>
           <code class="language-js">
             let arr1 = [1,2,3,4,5];   
@@ -110,17 +109,24 @@
             console.log(arr2.length); // The result in the console --> 4
           </code>
         </pre>
-        <p>We can also use alert to show the whole array.</p>
+        <p>We can also use <span style="background-color: #cacaca; border-radius: 3px;">alert( )</span> to show the whole array.</p>
         <pre>
           <code class="language-js">
-            alert("it's working!")
+            alert("it's working!");
           </code>
         </pre>
-        <p>You will see something like this in your browser</p>
-        <figure class="img-styles">
-          <img src="../assets/img/alert-browser.png" alt="">
-          <figcaption>Alert browser exemple!</figcaption>
-        </figure>
+        <p>..Or <span style="background-color: #cacaca; border-radius: 3px;">confirm( )</span></p>
+        <pre>
+          <code class="language-js">
+            confirm("it's working!");
+          </code>
+        </pre>
+        <p>..Or we can also <span style="background-color: #cacaca; border-radius: 3px;">prompt( )</span></p>
+        <pre>
+          <code class="language-js">
+            prompt("it's working!");
+          </code>
+        </pre>
         <h3>Methods pop/push, shift/unshift</h3>
         <p>A queue is one of the most common uses of an array. In computer science, this means an ordered collection of elements which supports two operations:</p>
         <p><span style="background-color: #cacaca; border-radius: 3px;">push( )</span> adds an element to the end</p>
