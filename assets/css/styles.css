@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
-    background: linear-gradient(#cfd9df, #e2ebf0);
+    background: linear-gradient(#dddede, #cecece);
     color: #000;
 }
 
@@ -93,7 +93,14 @@ h4 {
     font-style: italic;
     color: rgb(139, 154, 161);
 }
-
+h5 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #3a6186;
+}
 main>p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -149,7 +156,7 @@ DRY - Don't repeat yourself !
     margin: .5em auto !important;
     width: 80% !important;
 }
-.language-js {
+.language-javascript {
     margin: .5em auto !important;
     font-size: .9em !important;
 }
@@ -207,11 +214,21 @@ DRY - Don't repeat yourself !
 #blog-4>main article .img-styles {
     width: 40%;
 }
+
+/*#region **** my styles for my blog-5 **** */
+
+#blog-5>main article section {
+    border: solid 3px #afafaf;
+    border-radius: 80px 5px;
+    background-color: #ececec;
+    margin: 1em auto;
+    padding: 1em;
+}
 /* MEDIA QUERIES
 -------------------------------------------------------------------------------------------- */
-@media (max-width: 414px) {
+@media (max-width: 454px) {
     header {
-        width: 90%;
+        width: 80%;
         padding: 1.5rem 0;
     }
     main {
@@ -228,7 +245,24 @@ DRY - Don't repeat yourself !
     }
 
 }
+@media (max-width: 525px) {
+    header {
+        padding: 1.5rem 0;
+    }
+    header a {
+        font-size: 1.8em;
+    }
+    header nav {
+        font-size: 70%;
+    }
+    article {
+        margin: .5em 0;
+    }
+    #home-page>main p {
+        text-align: center;
+    }
 
+}
 /* --------Menu Hamberger--------- */
 #hamburger-menu {
     display: none;

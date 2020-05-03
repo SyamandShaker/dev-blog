@@ -48,14 +48,190 @@
     </nav>
 </header>
   <main>
-      <h2>Blog</h2>
+      <h2>Blog 5</h2>
+      <h4>Published 27.04.2020</h4>
       <article>
         <h3>JavaScript Functions</h3>
-        Quite often we need to perform a similar action in many places of the script.
-        <br>
-        For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else.
-        <br>
-        Functions are the main “building blocks” of the program. They allow the code to be called many times without repetition.
+        <p>
+          Quite often we need to perform a similar action in many places of the script.
+          <br>
+          For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else.
+          <br>
+          Functions are the main “building blocks” of the program. They allow the code to be called many times without repetition.
+        </p>
+        <h3>Function Declaration</h3>
+        <p>To create a function we can use a function declaration.</p>
+        <p>It looks like this:</p>
+        <pre>
+          <code class="language-javascript">
+            function showMessage() {
+              alert( 'Hello World!' );
+            }
+            showMessage();
+          </code>
+        </pre>
+        <p>
+          The <span style="background-color: #cacaca; border-radius: 3px;">function</span> keyword goes first, then goes the name of the function, then a list of parameters between the parentheses (comma-separated, empty in the example above) and finally the code of the function, also named “the function body”, between curly braces.
+        </p>
+        <pre>
+          <code class="language-javascript">
+            function name(parameters) {
+              ...body...
+            }
+          </code>
+        </pre>
+        <p>
+          Our new function can be called by its name: <span style="background-color: #cacaca; border-radius: 3px;">showMessage( )</span>.
+          <br>
+          For instance:
+        </p>
+        <pre>
+          <code class="language-javascript">
+            function showMessage() {
+              alert( 'Hello everyone!' );
+            }
+            
+            showMessage();
+            showMessage();
+          </code>
+        </pre>
+        <p>
+          The call <span style="background-color: #cacaca; border-radius: 3px;">showMessage( )</span> executes the code of the function. Here we will see the message two times.
+          <br>
+          This example clearly demonstrates one of the main purposes of functions: to avoid code duplication.
+          <br>
+          If we ever need to change the message or the way it is shown, it’s enough to modify the code in one place: the function which outputs it.
+        </p>
+        <h3>Local variables</h3>
+        <p>
+          A variable declared inside a function is only visible inside that function.
+          <br>
+          For example:
+        </p>
+        <pre>
+          <code class="language-javascript">
+            function showMessage() {
+              let message = "Hello, I'm JavaScript!"; // local variable
+            
+              alert( message );
+            }
+            
+            showMessage(); // Hello, I'm JavaScript!
+            
+            alert( message ); // --> Error! The variable is local to the function
+          </code>
+        </pre>
+        <h3>Outer variables</h3>
+        <p>A function can access an outer variable as well, for example:</p>
+        <pre>
+          <code class="language-javascript">
+            let userName = 'Sya';
+
+            function showMessage() {
+              let message = 'Hello, ' + userName;
+              alert(message);
+            }
+
+            showMessage(); // Hello, Sya
+          </code>
+        </pre>
+        <section>
+          <h5>Global variables !</h5>
+          <p>
+            <br>
+            Variables declared outside of any function, such as the outer userName in the code above, are called global.
+            <br>
+            Global variables are visible from any function (unless shadowed by locals).
+            <br>
+            It’s a good practice to minimize the use of global variables. Modern code has few or no globals. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.
+          </p>
+        </section>
+        <h3>Parameters</h3>
+        <p>
+          We can pass arbitrary data to functions using parameters (also called function arguments) .
+
+          In the example below, the function has two parameters: <span style="background-color: #cacaca; border-radius: 3px;">from</span> and <span style="background-color: #cacaca; border-radius: 3px;">text</span> .
+        </p>
+        <pre>
+          <code class="language-javascript">
+            function showMessage(from, text) { // arguments: from, text
+              alert(from + ': ' + text);
+            }
+            
+            showMessage('Lou', 'Hello!'); // Lou: Hello! (*)
+            showMessage('Lou', "What's up?"); // Lou: What's up? (**)
+          </code>
+        </pre>
+        <h3>Default values</h3>
+        <p>
+          If a parameter is not provided, then its value becomes <span style="background-color: #cacaca; border-radius: 3px;">undefined</span> .
+          <br>
+          For instance, the aforementioned function <span style="background-color: #cacaca; border-radius: 3px;">showMessage(from, text)</span> can be called with a single argument:
+        </p>
+        <pre>
+          <code class="language-javascript">
+            showMessage("Sya");
+          </code>
+        </pre>
+        <p>
+          That’s not an error. Such a call would output <span style="background-color: #cacaca; border-radius: 3px;">"Ann: undefined"</span> . 
+          There’s no <span style="background-color: #cacaca; border-radius: 3px;">text</span>, so it’s assumed that <span style="background-color: #cacaca; border-radius: 3px;">text === undefined</span>.
+          <br>
+          If we want to use a “default” <span style="background-color: #cacaca; border-radius: 3px;">text</span> in this case, then we can specify it after <span style="background-color: #cacaca; border-radius: 3px;">=</span> :
+        </p>
+        <pre>
+          <code class="language-javascript">
+            function showMessage(from, text = "no text given") {
+              alert( from + ": " + text );
+            }
+            
+            showMessage("Sya"); // Sya: no text given
+          </code>
+        </pre>
+        <p>Now if the <span style="background-color: #cacaca; border-radius: 3px;">text</span> parameter is not passed, it will get the value <span style="background-color: #cacaca; border-radius: 3px;">"no text given"</span> </p>
+        <section>
+          <h5>Evaluation of default parameters !</h5>
+          <p>In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.</p>
+        </section>
+        <h3>Returning a value</h3>
+        <p>
+          A function can return a value back into the calling code as the result.
+          <br>
+          The simplest example would be a function that sums two values :
+        </p>
+        <pre>
+          <code class="language-javascript">
+            // Return day of the week based on a number
+            function dayOfTheWeek(index) {
+
+              let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            
+              return days[index]; // EXIT here !
+            }
+            console.log(dayOfTheWeek); // Here I will see all the deys of the week 
+
+            // It's even possible to specify what day you want to see
+            console.log(dayOfTheWeek(5)); // The result in the console is "Saturday" !
+          </code>
+        </pre>
+        <p>Here is also an example to calculate the age of some one</p>
+        <pre>
+          <code class="language-javascript">
+            function calculateAge(name, birthYear) {
+
+              let date = new Date();
+              let currentYear = date.getFullYear();
+              let age = currentYear - birthYear;
+            
+              let display = name + " is " + age + " years old!";
+            
+              return display; // EXIT here !
+            
+            }
+            console.log( calculateAge("Marc", 1992) ); // Marc is 28 years old!
+            console.log( calculateAge("Sya", 1998) ); // Sya is 22 years old!
+          </code>
+        </pre>
       </article>
   </main>
   <footer>
