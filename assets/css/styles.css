@@ -39,10 +39,12 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem 0;
     align-items: center;
+    background-color: #ccc;
+    border-bottom: solid 1px #c4c4c4;
 }
 
 /* **** LINKS **** */
@@ -51,6 +53,11 @@ header a {
     font-size: 2em;
     font-weight: 600;
     color: #000;
+    margin-left: 10%;
+}
+
+header>nav{
+    margin-right: 10%;
 }
 
 header nav>a {
@@ -70,8 +77,9 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    max-width: 70%;
+    width: 60%;
     margin: 0 auto;
+    padding-top: 2em;
 }
 
 /* **** TITLES **** */
@@ -169,6 +177,10 @@ DRY - Don't repeat yourself !
     /* background compatible with --->  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #e2ebf0;
 }
+#home-page>header {
+    background-color: rgb(10, 18, 62);
+    border-bottom: solid .5px #30313a;
+}
 
 #home-page>header a {
     text-decoration: none;
@@ -227,24 +239,14 @@ DRY - Don't repeat yourself !
 /* MEDIA QUERIES
 -------------------------------------------------------------------------------------------- */
 @media (max-width: 454px) {
-    header {
-        width: 80%;
-        padding: 1.5rem 0;
-    }
-    main {
-        text-align: center;
-    }
     header a {
-        font-size: 1.8em;
-    }
-    header nav {
-        font-size: 70%;
+        margin-left: 5%;
     }
     article {
         margin: .5em 0;
     }
-
 }
+
 @media (max-width: 525px) {
     header {
         padding: 1.5rem 0;
@@ -252,14 +254,18 @@ DRY - Don't repeat yourself !
     header a {
         font-size: 1.8em;
     }
-    header nav {
-        font-size: 70%;
+    main {
+        text-align: center;
+        width: 90%;
     }
     article {
         margin: .5em 0;
     }
     #home-page>main p {
         text-align: center;
+    }
+    #hamburger-menu {
+        margin-right: 5% !important;
     }
 
 }
@@ -292,6 +298,7 @@ DRY - Don't repeat yourself !
         width: 50px;
         height: 35px;
         overflow: hidden;
+        margin-right: 10%;
     }
 
     #hamburger-menu a {
@@ -328,7 +335,9 @@ DRY - Don't repeat yourself !
         padding: .5em 0;
         font-size: 2.5em;
     }
-
+    main {
+        width: 70%;
+    }
     .img-styles {
         width: 100%;
         margin: 1.8em 0;
