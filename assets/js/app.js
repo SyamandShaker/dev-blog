@@ -1,22 +1,9 @@
-/* 
-const body = document.querySelector("body");
-const openMenu = document.querySelector("#open-menu");
-const closeMenu = document.querySelector("#close-menu");
+$(window).scroll(function() {    
+  let scroll = $(window).scrollTop();
 
-openMenu.addEventListener('click', function() {
-  body.classList.add('menu-is-open');
+  if (scroll >= 35) {
+      $(".clearHeader").addClass("darkHeader");
+  } else {
+      $(".clearHeader").removeClass("darkHeader");
+  }
 });
-closeMenu.addEventListener('click', function() {
-  body.classList.remove('menu-is-open');
-});
-*/
-
-/** 
-$(document).ready(function() {
-$(function(){
-    $('.hemberger').click(function(){
-      $('nav').toggleClass('active');
-    })
- });
-});
-*/
