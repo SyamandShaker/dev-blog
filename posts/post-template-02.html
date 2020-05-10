@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
+  
+  <!-- PLUGINS PRISM-JS -->
+  <link rel="stylesheet" href="../assets/plugins/prism-js/prism.css">
 
   <!-- GOOGLE FONTS -->
   <link
@@ -83,10 +86,53 @@
         <li>Extensive configurability and various included themes</li>
       </ol>
       <figure class="img-styles">
-        <img src="../assets/img/vs-code-exemple.png" alt="vs-code-exemple">
+        <img src="../assets/img/Blog-02/vs-code.jpg" alt="User-Interface">
         <figcaption>VS-Code exemple</figcaption>
       </figure>
-
+      <p>Go to the introduction to the basic UI, commands, and features of the VS Code editor <a href="https://code.visualstudio.com/docs/getstarted/userinterface"> for more info.</a></p>
+      <p>Enable additional languages, themes, debuggers, commands, and more. VS Code's growing community shares their secret sauce to improve your workflow.</p>
+      <p>Click Extensions in activity bar and type a keyword in the search box</p>
+      <figure class="img-styles">
+        <img src="../assets/img/Blog-02/vscode-install-extensions.jpg" alt="VScode-install-extensions">
+        <figcaption>VS-Code exemple</figcaption>
+      </figure>
+      <p>Some recommended extensions to install :</p>
+      <ol>
+        <li>Material Theme</li>
+        <li>Material Icon Theme</li>
+        <li>Live Server</li>
+        <li>Github Markdown Preview</li>
+        <li>Beautify</li>
+        <li>Color Manager</li>
+      </ol>
+      <h3>Useful Shorcuts</h3>
+      <ol>
+        <li>Keyboard Shortcuts 
+            <p>CTRL + B - Toggle Activity bar visibility</p>
+            <p>CTRL + SHIFT + P - Toggle Command Palette</p>
+        </li>
+        <li>EMMET (usually for HTML and CSS) - <a href="https://code.visualstudio.com/docs/editor/emmet">VSCode Emmet</a>
+        </li>
+      </ol>
+      <p>Write a shorcut code and then press TAB key. Examples :</p>
+      <pre>
+        <code class="language-js">
+          h1                      => h1> /h1>
+          p                       => p> /p>
+          h2#some-id              => h2 id="some-id"> /h2>
+          h2.some-class           => h2 class="some-class"> /h2>
+          h2#some-id.some-class   => h2 id="some-id" class="some-class"> /h2>
+          nav>ul>li*4>a           => nav>
+                                        ul>
+                                          li> a href=""> /a> /li>
+                                          li> a href=""> /a> /li>
+                                          li> a href=""> /a> /li>
+                                          li> a href=""> /a> /li>
+                                        /ul>
+                                    /nav>
+        </code>
+      </pre>
+      <p>! + TAB will create a basic html structure :</p>
     </article>
   </main>
   <footer>
@@ -104,6 +150,7 @@
         body.classList.remove('menu-is-open');
     });
   </script>
+  <script src="../assets/plugins/prism-js/prism.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
   <script src="../assets/js/app.js"></script>
 </body>
