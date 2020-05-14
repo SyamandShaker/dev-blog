@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?ukofm5') format('truetype'),
-    url('fonts/icomoon.woff?ukofm5') format('woff'),
-    url('fonts/icomoon.svg?ukofm5#icomoon') format('svg');
+    url('fonts/icomoon.ttf?l4iv7p') format('truetype'),
+    url('fonts/icomoon.woff?l4iv7p') format('woff'),
+    url('fonts/icomoon.svg?l4iv7p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -23,45 +23,61 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/******** CIRCL LEFT AND RIGHT ********/
+.icon-circle-left:before {
+  content: "\e900";
+  transition: .9s ease;
+}
+.icon-circle-left:hover {
+  color: #fff;
+  background-color: #4a4a4a;
+  border-radius: 25px;
+  padding: 2px;
+}
+.icon-circle-right:before {
+  content: "\e901";
+  transition: .9s ease;
+}
+.icon-circle-right:hover {
+  color:#fff;
+  background-color: #4a4a4a;
+  border-radius: 25px;
+  padding: 2px;
+}
+/******** MAIL ********/
+.icon-mail:before {
+  content: "\e905";
+}
+.icon-mail:hover {
+  color: rgb(255, 255, 255);
+  transition: .3s ease;
+}
 
+/******** GITHUB ********/
 .icon-github:before {
   content: "\e903";
 }
 .icon-github:hover {
   color: #fff;
-  box-shadow: 0 0 4px #fff;
+  box-shadow: 0 0 2px #fff;
   border-radius: 25px;
   transition: .3s ease;
 }
-.icon-email:before {
-  content: "\e900";
-}
-.icon-email:hover {
-  color: rgb(255, 255, 255);
-  border-radius: 25px;
-  box-shadow: 0 0 1px #fff;
-}
+
+/******** LINKEDIN ********/
 .icon-linkedin:before {
-  content: "\e901";
-}
-.icon-linkedin:hover {
-  color: rgb(0, 115, 177);;
-  box-shadow: 0 0 4px #3a6186;
-  transition: .3s ease;
-}
-/* .icon-facebook:before {
   content: "\e902";
 }
-.icon-facebook:hover {
-  color: rgb(54, 109, 218);
-  box-shadow: 0 0 4px #3a6186;
-  transition: .3s ease;
-} */
+.icon-linkedin:hover {
+  color: rgb(0, 115, 177);
+  transition: .4s ease;
+}
+
+/******** TWITTER ********/
 .icon-twitter:before {
   content: "\e904";
 }
 .icon-twitter:hover {
   color: rgb(29, 161, 242);
-  box-shadow: 0 0 4px #3a6186;
-  transition: .3s ease;
+  transition: .4s ease;
 }
