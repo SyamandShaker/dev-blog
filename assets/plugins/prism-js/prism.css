@@ -178,7 +178,7 @@ script[type='text/plain'][class*='language-'] {
 }
 
 div.code-toolbar {
-	position: relative;
+	/* position: relative; */
 }
 
 div.code-toolbar > .toolbar {
