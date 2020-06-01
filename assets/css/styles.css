@@ -15,6 +15,7 @@ border-spacing:0;box-sizing: border-box;}
 
 /* ** CODE GENERAL FOR ALL PAGES ** 
 -------------------------------------------------------------------------------------------- */
+/* ===== BODY ===== */
 body {
     display: flex;
     flex-direction: column;
@@ -81,26 +82,24 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 5.8em;
     padding-top: .6em;
 }
 
 /* **** TITLES **** */
-main>h2 {
-    font-size: 2em;
-}
-
 h2,
 h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.8em;
     margin: .3em 0;
     padding: .2em 0;
 }
-
+h3 {
+    font-size: 1.2em;
+}
 h4 {
     font-size: .9em;
     font-style: italic;
@@ -115,7 +114,7 @@ h5 {
     color: #3a6186;
 }
 
-article {
+article{
     font-size: 1.2em;
     line-height: 1.6em;
     margin: 0 0 1.6em;
@@ -130,10 +129,11 @@ ol {
 ol>li {
     padding: 5px 0;
 }
+
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    padding: 0.8rem 0;
+    padding: 0.6em 0;
 }
 
 footer>h3 {
@@ -160,11 +160,9 @@ DRY - Don't repeat yourself !
 .language-git{
     line-height: 1 !important;
     font-size: .9em !important;
-    margin: .5em auto !important;
 }
 .language-javascript {
-    margin: .5em auto !important;
-    font-size: .9em !important;
+    font-size: .95em !important;
 }
 .read-more {
     padding: .2em 0;
@@ -188,9 +186,8 @@ DRY - Don't repeat yourself !
 }
 .read-more>a:hover {
     color: #b12a00;
-}
-.menuTop {
-    padding-top: 6em;
+    font-size: 1.05em;
+    transition: .1s ease;
 }
 /* LAYOUT 
 -------------------------------------------------------------------------------------------- */
@@ -205,38 +202,38 @@ DRY - Don't repeat yourself !
     border-bottom: transparent;
     box-shadow: 0 0 transparent;
 }
-
 #home-page>header a {
-    text-decoration: none;
     color: #e2ebf0;
 }
-
 #home-page>header nav a:hover {
     color: #9ba8b5;
     border-bottom: none;
 }
-
 #home-page>main {
     justify-content: center;
     align-items: center;
+}
+#home-page>main h2 {
+    font-size: 2em;
 }
 #home-page>main p {
     margin-bottom: 1em;
     font-size: 1.1em;
     line-height: 1.2em;
 }
-#home-page img {
+#home-page>main img {
     width: 250px;
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 20px #567694;
 }
 
+/* -------- Circle left and right --------- */
 .post-nav {
     position: fixed;
     top:50%;
     margin-top: -16px;
-    font-size: 2.4em;
+    font-size: 3em;
 }
 .post-nav a {
     color: #737373;
@@ -247,12 +244,11 @@ DRY - Don't repeat yourself !
 .circle-right {
     right: 4%;
 }
-/* --------Menu Hamberger--------- */
+
+/* -------- Menu Hamberger --------- */
 #hamburger-menu {
     display: none;
 }
-
-
 /*#region **** my styles for about page **** */
 
 
@@ -272,7 +268,6 @@ DRY - Don't repeat yourself !
 
 
 /*#region **** my styles for my blog-5 **** */
-
 #blog-5>main article section {
     border: solid 3px #afafaf;
     border-radius: 80px 5px;
@@ -281,14 +276,9 @@ DRY - Don't repeat yourself !
     padding: 1em;
 }
 
-
-
-
 /* MEDIA QUERIES
 -------------------------------------------------------------------------------------------- */
-
-@media (max-width: 800px) {
-
+@media (max-width: 900px) {
     /*Hide the nav*/
     #main-nav {
         display: none;
@@ -298,33 +288,30 @@ DRY - Don't repeat yourself !
         width: 100vw;
         height: 100vh;
     }
-
     /*Nav triggers*/
     #hamburger-menu {
         display: block;
         position: relative;
         z-index: 1;
     }
-
     #hamburger-menu,
     #hamburger-menu a {
-        width: 50px;
+        width: 45px;
         height: 35px;
         overflow: hidden;
-        margin-right: 10%;
+        margin-right: 5%;
     }
-
     #hamburger-menu a {
         display: flex;
         justify-content: center;
     }
-
     #hamburger-menu img {
-        width: 75%;
         background-color: #e2ebf0;
         border-radius: .2em;
     }
-
+    #hamburger-menu img:hover {
+        background-color: #9ba8b5;
+    }
     .menu-is-open #open-menu {
         display: none;
     }
@@ -333,7 +320,6 @@ DRY - Don't repeat yourself !
     .menu-is-open {
         overflow: hidden;
     }
-
     .menu-is-open #main-nav {
         display: flex;
         justify-content: center;
@@ -341,12 +327,17 @@ DRY - Don't repeat yourself !
         flex-direction: column;
         background-color: rgba(0, 0, 0, .8);
     }
-
     header #main-nav a {
         color: rgb(226, 235, 240);
         margin: .5em 0;
         padding: .5em 0;
         font-size: 2.5em;
+    }
+    header>div {
+        margin-left: 5%;
+    }
+    header #main-nav a {
+        font-size: 2em;
     }
     main {
         width: 80%;
@@ -355,44 +346,8 @@ DRY - Don't repeat yourself !
         width: 100%;
         margin: 1.8em 0;
     }
-}
-
-@media (max-width: 525px) {
-    header {
-        padding: 1.5rem 0;
-    }
-    header a {
-        font-size: 1.8em;
-    }
-    main {
-       /*  text-align: center; */
-        width: 75%;
-    }
-
-    article {
-        margin: .5em 0;
-    }
-    #home-page>main p {
-        text-align: center;
-    }
-    #hamburger-menu {
-        margin-right: 5% !important;
-    }
-    .circle-left {
-        left: 3%;
-    }
-    .circle-right {
-        right: 3%;
-    }
-
-}
-
-@media (max-width: 454px) {
-    header a {
-        margin-left: 5%;
-    }
-    article {
-        margin: .5em 0;
+    .post-nav{
+        font-size: 2.2em;
     }
     .circle-left {
         left: 2%;
@@ -402,3 +357,60 @@ DRY - Don't repeat yourself !
     }
 }
 
+@media (max-width: 525px) {
+    header {
+        padding: 1.5rem 0;
+    }
+    header>div {
+        margin-left: 5%;
+    }
+    header #main-nav a {
+        font-size: 1.5em;
+    }
+    main {
+        width: 75%;
+    }
+    #home-page>main p {
+        text-align: center;
+    }
+    #home-page img {
+        width: 230px;
+    }
+}
+
+@media (max-width: 414px) {
+    header>div{
+        font-size: 1.8em;
+    }
+    #hamburger-menu, #hamburger-menu a {
+        width: 35px;
+        height: 30px;
+    }
+    .post-nav a {
+        font-size: .9em;
+    }
+    .circle-left {
+        left: 1%;
+    }
+    .circle-right {
+        right: 1%;
+    }
+}
+
+@media (max-width: 345px){
+    header {
+        padding: .6em 0;
+    }
+    header>div{
+        font-size: 1.4em;
+    }
+    #home-page>main {
+        text-align: center;
+    }
+    #home-page img {
+        width: 200px;
+    }
+    #home-page>main h2 {
+        font-size: 1.6em;
+    }
+}

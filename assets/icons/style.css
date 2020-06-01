@@ -26,23 +26,19 @@
 /******** CIRCL LEFT AND RIGHT ********/
 .icon-circle-left:before {
   content: "\e900";
-  transition: .9s ease;
+  transition: .3s ease-in-out;
 }
 .icon-circle-left:hover {
-  color: #fff;
-  background-color: #4a4a4a;
-  border-radius: 25px;
-  padding: 2px;
+  color: #bb441e;
+  font-size: .9em;
 }
 .icon-circle-right:before {
   content: "\e901";
-  transition: .9s ease;
+  transition: .3s ease-in-out;
 }
 .icon-circle-right:hover {
-  color:#fff;
-  background-color: #4a4a4a;
-  border-radius: 25px;
-  padding: 2px;
+  color:#bb441e;
+  font-size: .9em;
 }
 /******** MAIL ********/
 .icon-mail:before {
