@@ -90,7 +90,8 @@ main {
 
 /* **** TITLES **** */
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Roboto Slab', serif;
     font-weight: 500;
     font-size: 1.8em;
@@ -101,9 +102,7 @@ h3 {
     font-size: 1.2em;
 }
 h4 {
-    font-size: .9em;
-    font-style: italic;
-    color: rgb(139, 154, 161);
+    font-size: 1em;
 }
 h5 {
     font-family: 'Roboto Slab', serif;
@@ -113,13 +112,19 @@ h5 {
     letter-spacing: 1px;
     color: #3a6186;
 }
-
+h6 {
+    font-size: .9em;
+    font-style: italic;
+    color: rgb(139, 154, 161);
+}
 article{
     font-size: 1.2em;
     line-height: 1.6em;
     margin: 0 0 1.6em;
 }
-
+tr>td {
+    margin: 0 1em;
+}
 ol {
     list-style-type: decimal;
     margin: auto 15px;
@@ -188,6 +193,11 @@ DRY - Don't repeat yourself !
     color: #b12a00;
     font-size: 1.05em;
     transition: .1s ease;
+}
+.bullet-list  {
+    list-style: disc;
+    margin: 0 .8em;
+    padding: 0 .6em
 }
 /* LAYOUT 
 -------------------------------------------------------------------------------------------- */
