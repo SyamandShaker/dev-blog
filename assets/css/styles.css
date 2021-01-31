@@ -123,8 +123,10 @@ article{
     margin: 0 0 1.6em;
 }
 tr>td {
-    margin: 0 1em;
+    border: 1px solid #000c40;
+    padding: .5em;
 }
+
 ol {
     list-style-type: decimal;
     margin: auto 15px;
