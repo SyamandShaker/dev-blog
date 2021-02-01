@@ -126,18 +126,7 @@ tr>td {
     border: 1px solid #000c40;
     padding: .5em;
 }
-.table-border-left {
-    border-left: none;
-}
-.table-border-top {
-    border-top: none;
-}
-.table-border-bottom{
-    border-bottom: none;
-}
-.table-border-right {
-    border-right: none;
-}
+
 ol {
     list-style-type: decimal;
     margin: auto 15px;
@@ -216,6 +205,18 @@ DRY - Don't repeat yourself !
     display: list-item;
     margin: 0 1.4em;
     padding: 0 .2em;
+}
+.table-border-left {
+    border-left: none;
+}
+.table-border-top {
+    border-top: none;
+}
+.table-border-bottom{
+    border-bottom: none;
+}
+.table-border-right {
+    border-right: none;
 }
 
 /* LAYOUT 
