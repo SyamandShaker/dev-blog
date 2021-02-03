@@ -136,6 +136,15 @@ ol {
 ol>li {
     padding: 5px 0;
 }
+dl>dt>b {
+    font-weight: 600;
+}
+dl>dd>p {
+    display: list-item;
+    list-style: disclosure-closed;
+    margin: .5em 1.2em;
+    padding: .5em .6em;
+}
 
 /* ===== FOOTER ===== */
 footer {
