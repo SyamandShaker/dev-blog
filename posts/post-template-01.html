@@ -51,10 +51,41 @@
 </header>
   <main>
     <h2>Blog 1</h2>
-    <h6>Published 21.04.2020</h6>
+    <h6>Published 02.02.2021</h6>
     <article>
-      <h3>Lorem ipsum</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio corporis ipsum, alias aliquam recusandae aut mollitia? Sunt suscipit asperiores ab repudiandae, reprehenderit ducimus accusamus at. Voluptas earum itaque facilis quibusdam?</p>
+      <h3>The FHS (Filesystem Hierarchy Standard)</h3>
+        <p>The "standard" directory structure is described by the FHS (Filesystem Hierarchy Standard) to which most Linux distributions try to conform.</p>
+      <h4>What is the FHS?</h4>
+        <p>The FHS (Filesystem Hierarchy Standard) is a specification that defines the file system hierarchy of a Linux operating system. 
+          It specifies the minimum requirements for high-level subdirectories, such as /usr and /bin, and which files and symbolic links must be located in these directories. 
+          In an FHS-compliant operating system, all files and directories are anchored in a top-level directory named / (a single slash).</p>
+      <h4>The main directories are:</h4>
+      <dl>
+        <dt>
+          <b>/bin :</b>
+        </dt>
+        <dd>
+          <p>contains the basic commands (under Unix, almost all commands are "external", and not integrated in the shell like under DOS).</p>
+        </dd>
+        <dt>
+          <b>/boot :</b>
+        </dt>
+        <dd>
+          <p>contains the information necessary to start the machine.</p>
+        </dd>
+        <dt>
+          <b>/dev :</b>
+        </dt>
+        <dd>
+          <p>contains the special files corresponding to the devices.</p>
+        </dd>
+        <dt>
+          <b>/etc :</b>
+        </dt>
+        <dd>
+          <p>contains most of the configuration files.</p>
+        </dd>
+      </dl>
     </article>
   </main>
   <footer>
